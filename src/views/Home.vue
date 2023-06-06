@@ -2,7 +2,7 @@
   <div class="lg:w-1/2 md:w-2/3 max-sm:px-4 m-auto mt-20">
     <h3 class="text-center lg:text-2xl md:text-xl uppercase">elcass <span class="text-indigo-500">imad</span></h3>
 <div class="py-5 underline lg:text-lg md:text-md">About me</div>
-    <p class="font-semibold lg:text-lg max-sm:text-sm">
+    <p class="font-semibold lg:text-lg max-sm:text-sm ">
       Hello there! I'm <span class="text-indigo-500">Imad El Cass</span>, a highly skilled web and
       mobile developer hailing from the captivating country of Morocco. Currently, I reside in the
       breathtaking city of Agadir. Over the years, I have successfully completed numerous projects
