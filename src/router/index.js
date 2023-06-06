@@ -10,24 +10,33 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: { title: 'Home' }
     },
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: Portfolio
+      component: Portfolio,
+      meta: { title: 'Portfolio' }
     },
     {
       path: '/resume',
       name: 'resume',
-      component: Resume
+      component: Resume,
+      meta: { title: 'Resume' }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: Contact,
+      meta: { title: 'Contact' }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
 })
 
 export default router
