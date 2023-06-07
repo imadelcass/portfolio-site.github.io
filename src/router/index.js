@@ -30,6 +30,10 @@ const router = createRouter({
       name: 'contact',
       component: Contact,
       meta: { title: 'Contact' }
+    },
+    {
+      path: '/:catchAll(.*)',
+      redirect: { name: 'home' }
     }
   ]
 })
