@@ -98,8 +98,7 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-
-const fileUrl = '../../public/files/elcass_imad_CV_en.pdf'
+import fileUrl from '../../public/files/elcass_imad_CV_en.pdf'
 
 const experiences = ref([
   {
