@@ -1,0 +1,26 @@
+name: Deploy To Dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to imadelcass
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          script: |
+            cd /portfolio-site
+            git pull origin dev
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh 
+            rm -rf package-lock.json node_modules
+            npm install
+            npm run build
