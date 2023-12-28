@@ -1,6 +1,8 @@
 <template>
-  <navbar />
-  <RouterView />
+  <div class="bg-gray-100 min-h-screen">
+    <navbar />
+    <RouterView />
+  </div>
 </template>
 
 <script setup>

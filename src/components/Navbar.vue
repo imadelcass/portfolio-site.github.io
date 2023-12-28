@@ -1,5 +1,5 @@
 <template>
-  <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+  <nav x-data="{ isOpen: false }" class="relative shadow">
     <div class="container px-6 py-4 mx-auto">
       <div class="lg:flex lg:items-center lg:justify-between">
         <div class="flex items-center justify-between">
@@ -52,7 +52,7 @@
         <div
           x-cloak
           :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex max-lg:items-center hidden max-lg:flex lg:py-0 max-lg:justify-center max-lg:flex-row"
+          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex max-lg:items-center hidden max-lg:flex lg:py-0 max-lg:justify-center max-lg:flex-row"
         >
           <ul class=" list-none items-center inline-flex">
             <li v-for="route in routes" :key="route.name">
