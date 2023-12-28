@@ -1,18 +1,22 @@
 <template>
-  <div class="lg:w-1/2 md:w-2/3 max-sm:px-4 m-auto mt-20">
-    <h3 class="text-center lg:text-2xl md:text-xl uppercase">
-      elcass <span class="text-indigo-500">imad</span>
-    </h3>
-    <div class="py-5 underline lg:text-lg md:text-md">About me</div>
-    <p class="font-semibold lg:text-lg max-sm:text-sm">
-      Hello there! I'm <span class="text-indigo-500">Imad El Cass</span>, a highly skilled web and
-      mobile developer hailing from the captivating country of Morocco. Currently, I reside in the
-      breathtaking city of Agadir. Over the years, I have successfully completed numerous projects
-      as a freelancer, showcasing my expertise and dedication to delivering exceptional results. If
-      you're seeking a talented developer to bring your vision to life, I'm your go-to person. Let's
-      connect and collaborate on your next project for a truly remarkable outcome.
-    </p>
+  <div class="grid grid-cols-2 w-3/4 gap-x-4 m-auto mt-20">
+    <div class="col-span-1 h-[calc(100vh-20rem)]">
+      <img class="h-full w-full object-contain" src="@/assets/img/profile.jpg">
+    </div>
+
+    <div class="col-span-1">
+      <h3 class="pb-2">Hello <span class="text-indigo-500">there</span></h3>
+      <p>
+        I'm <span class="text-indigo-500">Imad El Cass</span>, a highly skilled web and mobile
+        developer hailing from the captivating country of Morocco. Currently, I reside in the
+        breathtaking city of Agadir. Over the years, I have successfully completed numerous projects
+        as a freelancer, showcasing my expertise and dedication to delivering exceptional results.
+        If you're seeking a talented developer to bring your vision to life, I'm your go-to person.
+        Let's connect and collaborate on your next project for a truly remarkable outcome.
+      </p>
+    </div>
   </div>
+
   <div class="flex gap-4 max-w-min m-auto mt-10">
     <a
       href="https://www.linkedin.com/in/imad-elcass/"
@@ -52,5 +56,3 @@
     </a>
   </div>
 </template>
-
-<script setup></script>
