@@ -88,7 +88,7 @@ const projects = ref([
     type: '',
     stack: ['JavaScript', 'React Native', 'Php', 'Laravel', 'MySQL'],
     name: 'Bimma EWD',
-    url: '#',
+    url: 'https://play.google.com/store/apps/details?id=com.bimma_ewd_v2',
     desc: 'Bimma EWD is a mobile application developed using JavaScript, React Native, PHP, and Laravel frameworks. It serves as a useful tool for accessing electrical schemas of various BMW models. Users can easily search for a specific schema and view it within the app. They also have the option to download the schema or add it to their bookmarks for future reference. To explore the source code, please check the provided link.',
     img: bimma,
     start_date: '2020-01-01',
