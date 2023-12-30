@@ -1,5 +1,5 @@
 <template>
-  <nav x-data="{ isOpen: false }" class="relative shadow">
+  <nav x-data="{ isOpen: false }" class="relative shadow dark:shadow-gray-500">
     <div class="container px-6 py-4 mx-auto">
       <div class="lg:flex lg:items-center lg:justify-between">
         <div class="flex items-center justify-between">
@@ -7,7 +7,7 @@
             class="text-lg tracking-tight text-black uppercase focus:outline-none focus:ring lg:text-2xl"
             href="/"
           >
-            <span class="lg:text-lg uppecase focus:ring-0">
+            <span class="lg:text-lg uppecase focus:ring-0 dark:text-gray-500">
               elcass <span class="text-indigo-500">imad</span>
             </span>
           </a>
@@ -58,12 +58,18 @@
             <li v-for="route in routes" :key="route.name">
               <router-link
                 :to="route.to"
-                class="px-2 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600"
+                class="px-2 py-8 text-sm text-gray-500 dark:text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600"
                 >{{ route.name }}</router-link
               >
             </li>
           </ul>
-          <el-switch v-model="darkMode" :active-action-icon="Moon" :inactive-action-icon="Sunny"  @Change="toggleMode()"/>
+          <el-switch
+            v-model="darkMode"
+            :active-action-icon="Moon"
+            :inactive-action-icon="Sunny"
+            size="small"
+            @Change="toggleMode()"
+          />
         </div>
       </div>
     </div>
@@ -72,18 +78,16 @@
 <script setup>
 import { ref } from 'vue'
 import { Sunny, Moon } from '@element-plus/icons-vue'
+import { useModeStore } from '@/stores/modeStore'
 
-const open = ref(false)
+const modeStore = useModeStore()
 const isOpen = ref(false)
-
-const emit = defineEmits(['change'])
 
 const darkMode = ref(false)
 
 const toggleMode = () => {
-  emit('change', darkMode.value)
+  modeStore.setMode(darkMode.value)
 }
-
 
 const routes = ref([
   {

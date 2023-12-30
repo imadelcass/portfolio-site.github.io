@@ -5,8 +5,8 @@
     </div>
 
     <div class="col-span-1">
-      <h3 class="pb-2">Hello <span class="text-indigo-500">there</span></h3>
-      <p>
+      <h3 class="pb-2 dark:text-gray-400">Hello <span class="text-indigo-500">there</span></h3>
+      <p class="dark:text-gray-400">
         I'm <span class="text-indigo-500">Imad El Cass</span>, a highly skilled web and mobile
         developer hailing from the captivating country of Morocco. Currently, I reside in the
         breathtaking city of Agadir. Over the years, I have successfully completed numerous projects
