@@ -54,7 +54,7 @@
           :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
           class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex max-lg:items-center hidden max-lg:flex lg:py-0 max-lg:justify-center max-lg:flex-row"
         >
-          <ul class=" list-none items-center inline-flex">
+          <ul class="list-none items-center inline-flex">
             <li v-for="route in routes" :key="route.name">
               <router-link
                 :to="route.to"
@@ -63,6 +63,7 @@
               >
             </li>
           </ul>
+          <el-switch v-model="darkMode" :active-action-icon="Moon" :inactive-action-icon="Sunny"  @Change="toggleMode()"/>
         </div>
       </div>
     </div>
@@ -70,9 +71,19 @@
 </template>
 <script setup>
 import { ref } from 'vue'
+import { Sunny, Moon } from '@element-plus/icons-vue'
 
 const open = ref(false)
 const isOpen = ref(false)
+
+const emit = defineEmits(['change'])
+
+const darkMode = ref(false)
+
+const toggleMode = () => {
+  emit('change', darkMode.value)
+}
+
 
 const routes = ref([
   {

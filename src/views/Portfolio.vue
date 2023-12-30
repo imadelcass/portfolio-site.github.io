@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div class="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
         <div
-          class="shadow-lg bg-white h-96"
+          class="shadow-lg bg-white h-96 rounded hover:cursor-pointer"
           v-for="(project, i) in projects"
           :key="i"
           @click="itemClicked(project)"
@@ -12,7 +12,8 @@
             <img :src="project.img" class="h-full w-full object-contain object-center" />
           </div>
           <div class="p-2">
-            <p class="text-lg font-light">{{ project.name }}</p>
+            <a class="text-indigo-500 after:content-['_↗'] ..." :href="project.url" target="_blank">{{ project.name }}</a>
+            <p class="text-md line-clamp-4 font-light text-gray-500">{{ project.desc }}</p>
           </div>
         </div>
       </div>
@@ -45,6 +46,7 @@ const projects = ref([
     type: 'Web App',
     stack: ['JavaScript', 'Vue'],
     name: 'Agriwise',
+    "url" : "#",
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity. The web application is built using JavaScript and the Vue.js framework.',
     img: agriwise
   },
@@ -53,6 +55,7 @@ const projects = ref([
     type: 'Web App',
     stack: ['JavaScript', 'Vue'],
     name: 'Ma3ahid',
+    "url" : "#",
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity. The web application is built using JavaScript and the Vue.js framework.',
     img: maahid
   },
@@ -61,6 +64,7 @@ const projects = ref([
     type: 'Mobile App',
     stack: ['JavaScript', 'React Native', 'Php', 'Laravel'],
     name: 'Bimma EWD',
+    "url" : "#",
     desc: 'Bimma EWD is a mobile application developed using JavaScript, React Native, PHP, and Laravel frameworks. It serves as a useful tool for accessing electrical schemas of various BMW models. Users can easily search for a specific schema and view it within the app. They also have the option to download the schema or add it to their bookmarks for future reference. To explore the source code, please check the provided link.',
     img: bimma
   }
