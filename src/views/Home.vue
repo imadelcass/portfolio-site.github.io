@@ -4,15 +4,10 @@
       <img class="h-full w-full object-contain" src="@/assets/img/profile.jpg">
     </div>
 
-    <div class="col-span-1">
-      <h3 class="pb-2 dark:text-gray-400">Hello <span class="text-indigo-500">there</span></h3>
-      <p class="dark:text-gray-400">
-        I'm <span class="text-indigo-500">Imad El Cass</span>, a highly skilled web and mobile
-        developer hailing from the captivating country of Morocco. Currently, I reside in the
-        breathtaking city of Agadir. Over the years, I have successfully completed numerous projects
-        as a freelancer, showcasing my expertise and dedication to delivering exceptional results.
-        If you're seeking a talented developer to bring your vision to life, I'm your go-to person.
-        Let's connect and collaborate on your next project for a truly remarkable outcome.
+    <div class="col-span-1 custom_font">
+      <h3 class="pb-3 dark:text-gray-400">Hi!<span class="text-indigo-500"></span></h3>
+      <p class="dark:text-gray-400 indent-8 tracking-wide leading-10">
+        I'm <span class="text-indigo-500 ">Imad El Cass</span>. I'm a computer development technician who specializes in web and mobile development. I live in Agadir, Morocco. I've worked on many projects and always do my best to make them successful. If you need a developer who can help make your ideas come to life, I'm here to help. Let's work together on your next project and make it the best one yet.
       </p>
     </div>
   </div>
@@ -56,3 +51,9 @@
     </a>
   </div>
 </template>
+
+<style>
+.custom_font {
+  font-family: "Segoe Print";
+}
+</style>
