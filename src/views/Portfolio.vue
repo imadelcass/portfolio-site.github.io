@@ -9,7 +9,7 @@
           @click="itemClicked(project)"
         >
           <div class="h-1/2 border-b dark:border-gray-600">
-            <img :src="project.img" class="h-full w-full object-contain object-center" />
+            <img :src="project.logo" class="h-full w-full object-contain object-center" />
           </div>
           <div class="p-2">
             <a
@@ -68,9 +68,7 @@ const projects = ref([
     name: 'Agriwise',
     url: '#',
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity.',
-    img: agriwise,
-    start_date: '2020-01-01',
-    end_date: '2020-01-01'
+    logo: agriwise
   },
   {
     id: 2,
@@ -79,9 +77,14 @@ const projects = ref([
     name: 'Ma3ahid',
     url: '#',
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity. The web application is built using JavaScript and the Vue.js framework.',
-    img: maahid,
-    start_date: '2020-01-01',
-    end_date: '2020-01-01'
+    logo: maahid,
+    imgs: [
+      '/src/assets/img/m1.png',
+      '/src/assets/img/m2.png',
+      '/src/assets/img/m3.png',
+      '/src/assets/img/m4.png',
+      '/src/assets/img/m5.png'
+    ]
   },
   {
     id: 3,
@@ -90,9 +93,14 @@ const projects = ref([
     name: 'Bimma EWD',
     url: 'https://play.google.com/store/apps/details?id=com.bimma_ewd_v2',
     desc: 'Bimma EWD is a mobile application developed using JavaScript, React Native, PHP, and Laravel frameworks. It serves as a useful tool for accessing electrical schemas of various BMW models. Users can easily search for a specific schema and view it within the app. They also have the option to download the schema or add it to their bookmarks for future reference. To explore the source code, please check the provided link.',
-    img: bimma,
-    start_date: '2020-01-01',
-    end_date: '2020-01-01'
+    logo: bimma,
+    imgs: [
+      '/src/assets/img/b1.png',
+      '/src/assets/img/b2.png',
+      '/src/assets/img/b3.png',
+      '/src/assets/img/b4.png',
+      '/src/assets/img/b5.png'
+    ]
   }
 ])
 </script>

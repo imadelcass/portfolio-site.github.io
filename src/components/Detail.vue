@@ -22,6 +22,12 @@
     <p class="px-2 pt-3 dark:text-gray-400">
       {{ item.desc }}
     </p>
+    <el-carousel v-if="item.imgs" :interval="4000" type="card" class="mt-10">
+      <el-carousel-item v-for="el in item.imgs" :key="el">
+        <img :src="getImageUrl(el)" class="h-full m-auto" />
+      </el-carousel-item>
+    </el-carousel>
+    <!-- <div v-else class="font-semibold flex justify-center items-center h-32">It's private project</div> -->
   </el-dialog>
 </template>
 
@@ -31,11 +37,23 @@ import { useModeStore } from '@/stores/modeStore'
 
 const modeStore = useModeStore()
 
+const getImageUrl = (url) => {
+  return new URL(url, import.meta.url).href
+}
+
 const { modelVisible, item } = inject('detail_model', false)
 </script>
 
 <style>
 .el-dialog__body {
   padding-top: 0 !important;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
 }
 </style>
