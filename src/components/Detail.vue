@@ -24,7 +24,7 @@
     </p>
     <el-carousel v-if="item.imgs" :interval="4000" type="card" class="mt-10">
       <el-carousel-item v-for="el in item.imgs" :key="el">
-        <img :src="getImageUrl(el)" class="h-full m-auto" />
+        <img :src="el" class="h-full m-auto" />
       </el-carousel-item>
     </el-carousel>
     <!-- <div v-else class="font-semibold flex justify-center items-center h-32">It's private project</div> -->
@@ -36,10 +36,6 @@ import { inject } from 'vue'
 import { useModeStore } from '@/stores/modeStore'
 
 const modeStore = useModeStore()
-
-const getImageUrl = (url) => {
-  return new URL(url, import.meta.url).href
-}
 
 const { modelVisible, item } = inject('detail_model', false)
 </script>

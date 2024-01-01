@@ -45,8 +45,13 @@
 import { provide, ref } from 'vue'
 import bimma from '@/assets/img/bimma.png'
 import agriwise from '@/assets/img/agriwise.png'
-import maahid from '@/assets/img/maahid.png'
 import Detail from '@/components/Detail.vue'
+import maahid from '@/assets/img/maahid.png'
+import m1 from '@/assets/img/m1.png'
+import m2 from '@/assets/img/m2.png'
+import m3 from '@/assets/img/m3.png'
+import m4 from '@/assets/img/m4.png'
+import m5 from '@/assets/img/m5.png'
 import { useModeStore } from '@/stores/modeStore'
 
 const modeStore = useModeStore()
@@ -78,13 +83,7 @@ const projects = ref([
     url: '#',
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity. The web application is built using JavaScript and the Vue.js framework.',
     logo: maahid,
-    imgs: [
-      '/src/assets/img/m1.png',
-      '/src/assets/img/m2.png',
-      '/src/assets/img/m3.png',
-      '/src/assets/img/m4.png',
-      '/src/assets/img/m5.png'
-    ]
+    imgs: [m1, m2, m3, m4, m5]
   },
   {
     id: 3,
@@ -95,11 +94,12 @@ const projects = ref([
     desc: 'Bimma EWD is a mobile application developed using JavaScript, React Native, PHP, and Laravel frameworks. It serves as a useful tool for accessing electrical schemas of various BMW models. Users can easily search for a specific schema and view it within the app. They also have the option to download the schema or add it to their bookmarks for future reference. To explore the source code, please check the provided link.',
     logo: bimma,
     imgs: [
-      '/src/assets/img/b1.png',
-      '/src/assets/img/b2.png',
-      '/src/assets/img/b3.png',
-      '/src/assets/img/b4.png',
-      '/src/assets/img/b5.png'
+      'https://play-lh.googleusercontent.com/p_oiIo5C5AfoFZ7jRMT-2Ff1aZ7XLojg3N7JkyE6lMEo5KMr1iAUj3VoxAk0MoDbSg=w526-h296-rw',
+      'https://play-lh.googleusercontent.com/IVTo1NIAQ87ICodrCkR4T6AzlVIhaJNf-998zUyRmxJelOARYjL58YhknP2EDBP_NLo=w526-h296-rw',
+      'https://play-lh.googleusercontent.com/opQjjP4tcQKF6cQrgkq42uM4qPC3q-2XZmZj8VX4sR3-3dUDyop5mgkKxZ0jGBtmgl4=w526-h296-rw',
+      'https://play-lh.googleusercontent.com/2DDMMZkC0FkPER2tXg7LJXVA-Xbdtq0jjwU28oE6Hiu7cVIZ_zBr0g-iZ-r5tTo58A=w526-h296-rw',
+      'https://play-lh.googleusercontent.com/umlp8d_WDyQH-9CIVqMFxHPZnWVDaNCvql_AdcDminRkN_7oifGhSnJg-2aOTQW6H04=w526-h296-rw',
+      'https://play-lh.googleusercontent.com/A6WQwmEXPvcT6_UziphfSPDth7lPLg-12wlc8tCPZzisP9Bng-s76vzRAoaxv404Bw=w526-h296-rw'
     ]
   }
 ])
