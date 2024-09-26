@@ -23,7 +23,7 @@
                 {{ exp.dates }}
               </h2>
               <p class="text-sm my-1">{{ exp.title }}</p>
-              <p class="text-sm">{{ exp.desc }}</p>
+              <p class="text-sm" v-html="exp.desc"></p>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
       </div>
     </div>
   </section>
-  <div class="flex justify-center mt-2 pb-4">
+  <div class="flex justify-center mt-2 pb-4 sticky bottom-0">
     <button
       class="rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
       @click="downloadFile"
@@ -93,15 +93,61 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import fileUrl from '../../public/files/MADELCASS 2023.pdf'
+import fileUrl from '../../public/files/cv.pdf'
 
 const experiences = ref([
   {
-    company: 'Agriwise',
+    company: 'BRAINBYTES',
     title: 'Web Developer',
-    desc: 'Collaborated on a Vue.js and Laravel solution for agricultural businesses. Designed, developed, and optimized key features. Worked closely with agricultural experts to meet specific needs.',
+    desc: `<strong>1. Finalizing and Improving the Existing Application:</strong> 
+    Worked with the team to finalize version 1 of an application using CakePHP and MySQL, fixing issues and making adjustments to meet user needs.
+    <br><br>
+    <strong>2. Optimizing Export Features:</strong> 
+    Implemented a queuing system to handle PDF data export with Puppeteer, improving the app's performance and stability.
+    <br><br>
+    <strong>3. Setting Up Docker and Separating Modules:</strong> 
+    Configured Docker for easier app deployment and isolated different modules in containers, enhancing portability and dependency management.
+    <br><br>
+    <strong>4. Integrating WebSockets:</strong> 
+    Added WebSockets for real-time communication between the frontend and backend, enabling file download status tracking and instant updates for users.
+    <br><br>
+    <strong>5. Migrating to Laravel and Vue.js:</strong> 
+    Rebuilt the application using Laravel for the backend and Vue.js for the frontend to clearly separate responsibilities and improve system maintainability and scalability.
+    <br><br>
+    <strong>6. Optimizing Databases:</strong> 
+    Redid database migrations to optimize performance, reducing query times and improving data management for a smoother and more responsive user experience.
+    <br><br>`,
     location: 'Agadir, Morocco',
-    dates: 'October 2022 - December 2023'
+    dates: 'February 2024 - September 2024'
+  },
+  {
+    company: 'WISE SYSTEMS',
+    title: 'Web Developer',
+    desc: `
+    <strong>1. Web Application Development:</strong> 
+    Built a strong web application named Agriwise with server-side design in Laravel and client-side design in Vue.js. 
+    Developed a well-designed MVC architecture with clear separation of concerns and wrote clean code for easy maintenance.
+    <br><br>
+    <strong>2. Database Management:</strong> 
+    Designed and optimized a large relational database in MySQL: schemas, database optimization, and database migration. 
+    Developed export features for reports to analyze data and provide information to users.
+    <br><br>
+    <strong>3. Testing and Debugging:</strong> 
+    Tested and debugged RESTful APIs with Insomnia to ensure consistent and high-performance web services. 
+    Documented APIs for effective software integration to reduce development costs and improve user experience.
+    <br><br>
+    <strong>4. Version Control and Source Code Management:</strong> 
+    Used Git for source code version control and worked with a team on GitHub, following best practices for branching and merging. 
+    Conducted code reviews to ensure code quality.
+    <br><br>
+    <strong>5. Agile Methodology:</strong> 
+    Worked in an Agile team, joined daily meetings to discuss team projects, and adapted plans as needed. 
+    Actively collaborated with other developers to solve technical problems and design, code, and deploy collaboratively and responsibly.
+    <br><br>
+    <strong>6. Collaboration and Inter-Team Support:</strong> 
+    Collaborated with design and product teams to influence and define technical requirements.`,
+    location: 'Agadir, Morocco',
+    dates: 'October 2022 - January 2024'
   },
   {
     company: 'Ma3ahid',
@@ -122,7 +168,7 @@ const experiences = ref([
 const educations = ref([
   {
     id: 1,
-    school: 'ISTA - Agadir',
+    school: 'Specialized Institute of Applied T - Agadir',
     location: 'Agadir, Morocco',
     dates: 'October 2020 - June 2022',
     degree: 'Specialized technician in computer development'

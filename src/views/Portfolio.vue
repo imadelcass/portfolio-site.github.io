@@ -44,6 +44,7 @@
 <script setup>
 import { provide, ref } from 'vue'
 import bimma from '@/assets/img/bimma.png'
+import elevateGuru from '@/assets/img/elevateGuru.png'
 import agriwise from '@/assets/img/agriwise.png'
 import Detail from '@/components/Detail.vue'
 import maahid from '@/assets/img/maahid.png'
@@ -52,6 +53,9 @@ import m2 from '@/assets/img/m2.png'
 import m3 from '@/assets/img/m3.png'
 import m4 from '@/assets/img/m4.png'
 import m5 from '@/assets/img/m5.png'
+import eg1 from '@/assets/img/eg1.svg'
+import eg2 from '@/assets/img/eg2.svg'
+import eg3 from '@/assets/img/eg3.svg'
 import { useModeStore } from '@/stores/modeStore'
 
 const modeStore = useModeStore()
@@ -68,25 +72,35 @@ const itemClicked = (e) => {
 const projects = ref([
   {
     id: 1,
+    type: '',
+    stack: ['CakePHP', 'MySQL', 'Docker', 'Puppeteer', 'WebSockets', 'Laravel', 'Vue'],
+    name: 'Elevate Guru',
+    url: 'https://www.elevateguru.com/en',
+    desc: 'ElevateGuru.com is an online platform tailored for business advisors and entrepreneurs, enhancing workflow and collaboration. It guides startups through essential steps, from developing compelling business concepts to optimizing operations. With a comprehensive toolkit for informed decision-making, exceptional training programs, and monitoring tools, ElevateGuru empowers users to measure impact and highlight success stories. The platform fosters collaboration, providing resources for various business development aspects, making it essential for entrepreneurs at any stage of their journey.',
+    logo: elevateGuru,
+    imgs: [eg1, eg2, eg3]
+  },
+  {
+    id: 2,
     type: 'success',
     stack: ['JavaScript', 'Vue', 'Php', 'Laravel', 'MySQL'],
     name: 'Agriwise',
-    url: '#',
+    url: 'https://agriwise.ma',
     desc: 'Agriwise is a comprehensive farm management system that streamlines various agricultural processes. It provides tools for managing employees, users, point-of-sale, inventory, reception, expedition, and more. With Agriwise, farmers can efficiently track and analyze their operations, enabling better decision-making and increased productivity.',
     logo: agriwise
   },
   {
-    id: 2,
+    id: 3,
     type: 'danger',
     stack: ['JavaScript', 'Vue', 'Php', 'Laravel', 'MySQL'],
     name: 'Ma3ahid',
-    url: '#',
+    url: 'https://ma3ahid.gismait.com/',
     desc: "Ma3ahid is a versatile web application tailored for school management, catering to the needs of trainees, trainers, and tutors. The application featured a robust timetable system, facilitating the scheduling of sessions, modules, and groups across different sectors, optimizing the overall learning experience. 📅✨ A key highlight was the implementation of a user system with role-based access control. The Super Admin could create custom roles, such as 'Assistance', and assign specific permissions. This allowed for a highly customizable system, enabling users to perform tasks like creating or updating groups and modules based on their assigned roles. 🛠️🔐 'Ma3ahid' supported seamless data export to Excel, enhancing data analysis capabilities. Additionally, it allowed for the generation of printable documents, such as timetables in PDF format, providing users with convenient documentation options. 📊🖨️ To streamline financial management, the web app supported invoicing and payments, contributing to the overall efficiency of administrative tasks within the educational institution. 💸📑 In summary, 'Ma3ahid' prioritized user flexibility, offering a customizable solution for academic institutions. Its diverse features aimed to simplify administrative processes, optimize resource allocation, and contribute to the overall success of the educational institution. 🏫🚀",
     logo: maahid,
     imgs: [m1, m2, m3, m4, m5]
   },
   {
-    id: 3,
+    id: 4,
     type: '',
     stack: ['JavaScript', 'React Native', 'Php', 'Laravel', 'MySQL'],
     name: 'Bimma EWD',

@@ -7,7 +7,7 @@
     <div class="col-span-1 custom_font">
       <h3 class="pb-3 dark:text-gray-400">Hi!<span class="text-indigo-500"></span></h3>
       <p class="dark:text-gray-400 indent-8 tracking-wide leading-10">
-        I'm <span class="text-indigo-500 ">Imad El Cass</span>. I'm a computer development technician who specializes in web and mobile development. I live in Agadir, Morocco. I've worked on many projects and always do my best to make them successful. If you need a developer who can help make your ideas come to life, I'm here to help. Let's work together on your next project and make it the best one yet.
+        I'm <span class="text-indigo-500 ">Imad El Cass</span>. I'm a computer development technician who specializes in web and mobile development. I live in Morocco. I've worked on many projects and always do my best to make them successful. If you need a developer who can help make your ideas come to life, I'm here to help. Let's work together on your next project and make it the best one yet.
       </p>
     </div>
   </div>
